@@ -1,0 +1,18 @@
+extends ../layout
+
+block content
+    h1 Add New Course
+    form(action="/products/add",method="post")
+        .form-group
+            label(for="Coursename") Coursename
+            input#Coursename(type="text", class="form-control",name="Coursename")
+        .form-group
+            label(for="Courseid") Course ID
+            input#Courseid(type="text", class="form-control",name="Courseid")
+        .form-group
+            label(for="Courseduration") Course Duration (hrs)
+            input#Courseduration(type="text", class="form-control",name="Courseduration")
+        .form-group
+            label(for="fee") Course fee
+            input#fee(type="Number", class="form-control",name="fee")
+        input(type="submit", class="btn btn-info")

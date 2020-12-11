@@ -1,0 +1,19 @@
+extends ../layout
+
+block content
+    h1 Update Course
+    form(action="/products/update/"+product._id,method="post")
+
+        .form-group
+            label(for="Coursename") Coursename
+            input#Coursename(type="text", class="form-control",name="Coursename", value=product.Coursename)
+        .form-group
+            label(for="Courseid") Course ID
+            input#Courseid(type="text", class="form-control",name="Courseid", value=product.Courseid)
+        .form-group
+            label(for="Courseduration") Course Duration (hrs)
+            input#Courseduration(type="text", class="form-control",name="Courseduration", value=product.Courseduration)
+        .form-group
+            label(for="fee") Course fee
+            input#fee(type="Number", class="form-control",name="fee", value=product.fee)
+        input(type="submit", class="btn btn-info")

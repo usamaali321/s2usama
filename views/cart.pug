@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  h1 My Courses
+  - var total=0;
+    table.table
+      thead
+        tr
+          th Course Name
+          th Course ID
+          th Course Duration
+          th Course Fee
+          th Remove 
+      tbody
+        each item in cart
+          - total +=(item.fee);
+          tr
+            td=item.Coursename
+            td=item.Courseid
+            td=item.Courseduration
+            td=item.fee
+            td 
+              a(href="/products/cart/remove/"+item._id,class="btn btn-danger") Remove
+      tfoot
+        tr
+            td TOTAL
+          
+            td=total
